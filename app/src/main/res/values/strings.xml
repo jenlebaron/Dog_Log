@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dog Log</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_shots">Shots</string>
+    <string name="menu_office_visits">Office Visits</string>
+    <string name="menu_food">Food</string>
+    <string name="menu_medication">Medication</string>
 </resources>
