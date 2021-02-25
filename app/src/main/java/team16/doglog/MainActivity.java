@@ -21,31 +21,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //called when user selects shots from main menu
-    public void selectShots(View view){
-        Intent intent = new Intent(this, Shots.class);
+    //called when user selects medical history from main menu
+    public void selectMedicalHistory(View view){
+        Intent intent = new Intent(this, MedicalHistory.class);
         startActivity(intent);
 
     }
 
-    //called when user selects office visits from main menu
-    public void selectOfficeVisits(View view){
-        Intent intent = new Intent(this, OfficeVisits.class);
+    //called when user selects shots and medication from main menu
+    public void selectShotsMedication(View view){
+        Intent intent = new Intent(this, ShotsMedication.class);
         startActivity(intent);
 
     }
 
-    //called when user selects food from main menu
-    public void selectFood(View view){
-        Intent intent = new Intent(this, Food.class);
+    //called when user selects Reminders from main menu
+    public void selectReminders(View view){
+        Intent intent = new Intent(this, Reminders.class);
         startActivity(intent);
 
     }
 
-    //called when user selects medication from main menu
-    public void selectMedication(View view){
-        Intent intent = new Intent(this, Medication.class);
-        startActivity(intent);
-
-    }
 }

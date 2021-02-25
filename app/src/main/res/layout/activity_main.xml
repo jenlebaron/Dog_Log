@@ -19,50 +19,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_shots"
+        android:id="@+id/button_medical_history"
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="selectShots"
-        android:text="@string/menu_shots"
+        android:onClick="selectMedicalHistory"
+        android:text="@string/menu_medical_history"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_profile" />
 
     <Button
-        android:id="@+id/button_office_visits"
+        android:id="@+id/button_shots_medication"
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="selectOfficeVisits"
-        android:text="@string/menu_office_visits"
+        android:onClick="selectShotsMedication"
+        android:text="@string/menu_shots_medication"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_shots" />
+        app:layout_constraintTop_toBottomOf="@+id/button_medical_history" />
 
     <Button
-        android:id="@+id/button_food"
+        android:id="@+id/button_reminders"
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="selectFood"
-        android:text="@string/menu_food"
+        android:onClick="selectReminders"
+        android:text="@string/menu_reminders"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_office_visits" />
+        app:layout_constraintTop_toBottomOf="@+id/button_shots_medication" />
 
-    <Button
-        android:id="@+id/button_medication"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="selectMedication"
-        android:text="@string/menu_medication"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_food" />
 </androidx.constraintlayout.widget.ConstraintLayout>
