@@ -4,4 +4,14 @@
     <string name="menu_medical_history">Medical History</string>
     <string name="menu_shots_medication">Shots and Medication</string>
     <string name="menu_reminders">Reminders</string>
+    <string name="reminder_food">Order Food</string>
+    <string name="reminder_office_visit">Schedule Office Visit</string>
+    <string name="reminder_distemper_shot">Schedule Distemper Shot</string>
+    <string name="reminder_rabies_shot">Schedule Rabies Shot</string>
+    <string name="reminder_parvo_shot">Schedule Parvo Shot</string>
+    <string name="reminder_hepatitis_shot">Schedule Hepatitis Shot</string>
+    <string name="hint_month">MM</string>
+    <string name="hint_day">DD</string>
+    <string name="hint_year">YYYY</string>
+    <string name="button_save">Save</string>
 </resources>

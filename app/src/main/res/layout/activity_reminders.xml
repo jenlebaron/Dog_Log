@@ -7,17 +7,350 @@
     tools:context=".Reminders">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/order_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="33dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_food"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="304dp"
-        android:layout_height="16dp"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="34dp" />
+    <TextView
+        android:id="@+id/Reminder_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/menu_reminders"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/schedule_office_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_office_visit"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_month" />
+
+    <TextView
+        android:id="@+id/schedule_distemper_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_distemper_shot"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/office_visit_month" />
+
+    <TextView
+        android:id="@+id/schedule_rabies_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_rabies_shot"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_month" />
+
+    <TextView
+        android:id="@+id/schedule_parvo_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_parvo_shot"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_month" />
+
+    <TextView
+        android:id="@+id/schedule_hepatitis_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_hepatitis_shot"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_month" />
+
+    <EditText
+        android:id="@+id/food_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_food" />
+
+    <EditText
+        android:id="@+id/office_visit_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <EditText
+        android:id="@+id/distemper_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/rabies_month"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
+
+    <EditText
+        android:id="@+id/parvo_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <EditText
+        android:id="@+id/hepatitis_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+
+    <EditText
+        android:id="@+id/food_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/food_month"
+        app:layout_constraintTop_toBottomOf="@+id/order_food" />
+
+    <EditText
+        android:id="@+id/office_visit_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/office_visit_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <EditText
+        android:id="@+id/distemper_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/distemper_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/rabies_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
+
+    <EditText
+        android:id="@+id/parvo_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <EditText
+        android:id="@+id/hepatitis_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+
+    <EditText
+        android:id="@+id/food_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/food_day"
+        app:layout_constraintTop_toBottomOf="@+id/order_food" />
+
+    <EditText
+        android:id="@+id/office_visit_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/office_visit_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <EditText
+        android:id="@+id/distemper_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/distemper_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/rabies_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
+
+    <EditText
+        android:id="@+id/parvo_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <EditText
+        android:id="@+id/hepatitis_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+
+    <Button
+        android:id="@+id/button_save_reminders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hepatitis_month" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
