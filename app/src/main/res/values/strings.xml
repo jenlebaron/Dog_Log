@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dog Log</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_medical_history">Medical History</string>
+    <string name="menu_shots_medication">Shots and Medication</string>
+    <string name="menu_reminders">Reminders</string>
 </resources>
