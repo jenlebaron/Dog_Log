@@ -13,5 +13,15 @@
     <string name="hint_month">MM</string>
     <string name="hint_day">DD</string>
     <string name="hint_year">YYYY</string>
-    <string name="button_save">Save</string>
+    <string name="button_save" translatable="false">Save</string>
+    <string name="distemper_shot_date">Distemper Shot Date</string>
+    <string name="rabies_shot_date">Rabies Shot Date</string>
+    <string name="parvo_shot_date">Parvo Shot Date</string>
+    <string name="hepatitis_shot_date">Hepatitis Shot Date</string>
+    <string name="medical_info">Medical Information</string>
+    <string name="other_shot_date_and_name">Other Shots</string>
+    <string name="other_shot_name">Name of Shot</string>
+    <string name="shots">Shots</string>
+    <string name="medication">Medication</string>
+    <string name="medication_information">Enter any type of medication information here.</string>
 </resources>

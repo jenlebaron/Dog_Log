@@ -7,10 +7,372 @@
     tools:context=".ShotsMedication">
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is the shots and medication screen"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="38dp" />
+        android:id="@+id/Shots"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/shots"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/distemper_shot_date"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/distemper_shot_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rabies_shot_date"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/rabies_shot_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_shot_date" />
+
+    <TextView
+        android:id="@+id/parvo_shot_date"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/parvo_shot_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_shot_date" />
+
+    <TextView
+        android:id="@+id/hepatitis_shot_date"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/hepatitis_shot_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_shot_date" />
+
+    <TextView
+        android:id="@+id/misc_shot_date_and_name"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/other_shot_date_and_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hepatitis_shot_date" />
+
+    <EditText
+        android:id="@+id/distemper_shot_year"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/distemper_shot_day"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/rabies_shot_month"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_shot_date"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_shot_month"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/parvo_shot_month"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_shot_date"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_shot_month"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/hepatitis_shot_month"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_shot_date"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_shot_month"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/other_shot_name"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/other_shot_name"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toEndOf="@+id/misc_shot_date_and_name"
+        app:layout_constraintTop_toBottomOf="@+id/hepatitis_shot_day"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/medLabel"
+        android:layout_width="125dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="370dp"
+        android:text="@string/medication"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/medical_info"
+        android:layout_width="286dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="420dp"
+        android:ems="10"
+        android:hint="@string/medication_information"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/button_save_shots_medication"
+        android:layout_width="201dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="28dp"
+        android:onClick="saveShotsMedication"
+        android:text="@string/button_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medical_info" />
+
+    <EditText
+        android:id="@+id/distemper_shot_month"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:textColor="#0B0A0A"
+        app:layout_constraintStart_toEndOf="@+id/distemper_shot_date"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/distemper_shot_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:textColor="#0C0C0C"
+        app:layout_constraintStart_toEndOf="@+id/distemper_shot_month"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/rabies_shot_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_shot_month"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_shot_day"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/rabies_shot_year"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rabies_shot_day"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_shot_year"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/parvo_shot_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_shot_month"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_shot_day"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/parvo_shot_year"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/parvo_shot_day"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_shot_year"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/hepatitis_shot_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_shot_month"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_shot_day"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/hepatitis_shot_year"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_shot_day"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_shot_year"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/other_shot_month"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_shot_name"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/other_shot_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/other_shot_month"
+        app:layout_constraintTop_toBottomOf="@+id/other_shot_name"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/other_shot_year"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/other_shot_day"
+        app:layout_constraintTop_toBottomOf="@+id/other_shot_name"
+        android:importantForAutofill="no" />
 </androidx.constraintlayout.widget.ConstraintLayout>
