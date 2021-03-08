@@ -99,7 +99,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_food" />
@@ -113,7 +113,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
@@ -127,7 +127,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
@@ -141,7 +141,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
@@ -155,7 +155,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
@@ -169,7 +169,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_month"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
@@ -183,7 +183,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/food_month"
         app:layout_constraintTop_toBottomOf="@+id/order_food" />
@@ -197,7 +197,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/office_visit_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
@@ -211,7 +211,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/distemper_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
@@ -225,7 +225,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/rabies_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
@@ -239,7 +239,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/parvo_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
@@ -253,7 +253,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/hepatitis_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
@@ -267,7 +267,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/food_day"
         app:layout_constraintTop_toBottomOf="@+id/order_food" />
@@ -281,7 +281,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/office_visit_day"
         app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
@@ -295,7 +295,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/distemper_day"
         app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
@@ -309,7 +309,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/rabies_day"
         app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
@@ -323,7 +323,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/parvo_day"
         app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
@@ -337,7 +337,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/hepatitis_day"
         app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />

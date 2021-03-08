@@ -208,12 +208,12 @@
         android:layout_marginTop="84dp"
         android:ems="10"
         android:hint="@string/hint_month"
+        android:importantForAutofill="no"
         android:inputType="number"
-        android:textSize="18sp"
         android:textColor="#0B0A0A"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/distemper_shot_date"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/distemper_shot_day"

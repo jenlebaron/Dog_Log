@@ -12,5 +12,6 @@
         android:layout_height="wrap_content"
         android:text="This is the medical history screen"
         tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="46dp" />
+        tools:layout_editor_absoluteY="46dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

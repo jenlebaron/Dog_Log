@@ -22,17 +22,6 @@ public class Reminders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminders);
-
-        //load reminder dates already set
-        loadDates();
-    }
-
-    private void loadDates(){
-        SharedPreferences sharedPrefs = this.getSharedPreferences("Reminders", Context.MODE_PRIVATE);
-        Map<String, ?> dates = sharedPrefs.getAll();
-        for (Map.Entry<String,?> e : dates.entrySet()) {
-
-        }
     }
 
     //called when user taps save button
@@ -48,11 +37,14 @@ public class Reminders extends AppCompatActivity {
 
         Map<String, Long> reminderDates = new HashMap<>();
         Long dateInMillis;
+        SharedPreferences sharedPrefs = this.getSharedPreferences("Reminders", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
 
         int i =0;
         for(int j = 0; j < ids.length; j++){
             EditText t = (EditText) findViewById(ids[j]);
             String month = t.getText().toString();
+            editor.putString(keys[i] + "Month", month);
             j++;
             t = (EditText) findViewById(ids[j]);
             String day = t.getText().toString();
@@ -84,7 +76,7 @@ public class Reminders extends AppCompatActivity {
         int month = Integer.parseInt(m);
         int day = Integer.parseInt(d);
         int year = Integer.parseInt(y);
-        c.set(year, month, day, 15, 16);
+        c.set(year, month, day);
         Log.d("message", "returning " + c.getTimeInMillis());
         return c.getTimeInMillis();
     }
