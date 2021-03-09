@@ -23,5 +23,5 @@
     <string name="other_shot_name">Name of Shot</string>
     <string name="shots">Shots</string>
     <string name="medication">Medication</string>
-    <string name="medication_information">Enter any type of medication information here.</string>
+    <string name="medication_information">Enter medication information here.</string>
 </resources>

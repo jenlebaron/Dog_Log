@@ -39,29 +39,25 @@ public class ShotsMedication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shots_medication);
         Log.d(String.valueOf(this),"Oncreate");
-    }
-
-    public void saveShotsMedication(View view) {
-
-
+        
         //add distemper shot date to shared preferences
-        distemperMonthId =  (EditText) findViewById(R.id.distemper_month);
-        distemperDayId = (EditText)findViewById(R.id.distemper_day);
+        distemperMonthId =  (EditText) findViewById(R.id.distemper_shot_month);
+        distemperDayId = (EditText)findViewById(R.id.distemper_shot_day);
         distemperYearId = (EditText)findViewById(R.id.distemper_shot_year);
 
         //add rabies shot date to shared preferences
-        rabiesMonthId =  (EditText) findViewById(R.id.rabies_month);
-        rabiesDayId = (EditText)findViewById(R.id.rabies_day);
+        rabiesMonthId =  (EditText) findViewById(R.id.rabies_shot_month);
+        rabiesDayId = (EditText)findViewById(R.id.rabies_shot_day);
         rabiesYearId = (EditText)findViewById(R.id.rabies_shot_year);
 
         //add parvo shot date to shared preferences
-        parvoMonthId =  (EditText) findViewById(R.id.parvo_month);
-        parvoDayId = (EditText)findViewById(R.id.parvo_day);
+        parvoMonthId =  (EditText) findViewById(R.id.parvo_shot_month);
+        parvoDayId = (EditText)findViewById(R.id.parvo_shot_day);
         parvoYearId= (EditText)findViewById(R.id.parvo_shot_year);
 
         //add hepatitis shot date to shared preferences
-        hepatitisMonthId =  (EditText) findViewById(R.id.hepatitis_month);
-        hepatitisDayId = (EditText)findViewById(R.id.hepatitis_day);
+        hepatitisMonthId =  (EditText) findViewById(R.id.hepatitis_shot_month);
+        hepatitisDayId = (EditText)findViewById(R.id.hepatitis_shot_day);
         hepatitisYearId= (EditText)findViewById(R.id.hepatitis_shot_year);
 
         //add other shot name and date to shared preferences
@@ -72,8 +68,45 @@ public class ShotsMedication extends AppCompatActivity {
 
         //add medicine to shared preferences
         medicationId = (EditText)findViewById(R.id.medical_info);
+    }
+    
+//    load function call it in oncreate after all findview by
+//    public void loadShotsMedication(View view) {
+//        // load from saved preferences
+//        SharedPreferences sp = getSharedPreferences(
+//                "ShotsMedication.txt", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor myEdit = sp.edit();
+//
+//        myEdit.putString("DISTEMPER_MONTH", distemperMonth));
+//        myEdit.putString("DISTEMPER_DAY", distemperDay);
+//        myEdit.putString("DISTEMPER_YEAR", distemperYear);
+//
+//        myEdit.putString("RABIES_MONTH", rabiesMonth);
+//        myEdit.putString("RABIES_DAY", rabiesDay);
+//        myEdit.putString("RABIES_YEAR", rabiesYear);
+//
+//        myEdit.putString("PARVO_MONTH", parvoMonth);
+//        myEdit.putString("PARVO_DAY", parvoDay);
+//        myEdit.putString("PARVO_YEAR", parvoYear);
+//
+//        myEdit.putString("HEPATITIS_MONTH", hepatitisMonth);
+//        myEdit.putString("HEPATITIS_DAY", hepatitisDay);
+//        myEdit.putString("HEPATITIS_YEAR", hepatitisYear);
+//
+//        myEdit.putString("OTHER_SHOTS_NAME", otherShotsName);
+//        myEdit.putString("OTHER_SHOTS_MONTH", otherShotsMonth);
+//        myEdit.putString("OTHER_SHOTS_DAY", otherShotsDay);
+//        myEdit.putString("OTHER_SHOTS_YEAR", otherShotsYear);
+//
+//        myEdit.putString("MEDICATION", medication);
+//    }
 
 
+
+
+    public void saveShotsMedication(View view) {
+
+        //pulling strings out of objects
         String distemperMonth =  distemperMonthId.getText().toString();
         String distemperDay = distemperDayId.getText().toString();
         String distemperYear = distemperYearId.getText().toString();
@@ -96,7 +129,6 @@ public class ShotsMedication extends AppCompatActivity {
         String otherShotsYear = otherShotsYearId.getText().toString();
 
         String medication = medicationId.getText().toString();
-
 
 
         SharedPreferences sharedPref = getSharedPreferences(
@@ -127,7 +159,7 @@ public class ShotsMedication extends AppCompatActivity {
         editor.putString("MEDICATION", medication);
         editor.apply();
 
-        Toast.makeText(this, "Shots & Medication Saved", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Shots & medication saved", Toast.LENGTH_SHORT).show();
         Log.d(getClass().getName(),"Received Toast");
     }
 }
