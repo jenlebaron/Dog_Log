@@ -4,13 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile">
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:text="Select Profile"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the profile screen"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="75dp" />
+        android:textSize="50dp"
+        android:text="Dog Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:text="Select Profile"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:text=" Add Dog Name"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="417dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="574dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
