@@ -24,4 +24,8 @@
     <string name="shots">Shots</string>
     <string name="medication">Medication</string>
     <string name="medication_information">Enter any type of medication information here.</string>
+    <string name="medical_history_date">Enter Date</string>
+    <string name="medical_history_notes">Enter Notes</string>
+    <string name="button_load_notes">View Notes</string>
+    <string name="button_save_note">Save Note</string>
 </resources>

@@ -22,6 +22,25 @@ public class Reminders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminders);
+
+        this.loadDates();
+    }
+
+    //called when activity is created
+    public void loadDates(){
+        Log.d("message", "entered loadDates");
+        SharedPreferences sharedPref = getSharedPreferences("ReminderDate", Context.MODE_PRIVATE);
+        Log.d("message", sharedPref.getAll().toString());
+        String month = sharedPref.getString("foodMonth", "");
+        String day = sharedPref.getString("foodDay", "");
+        String year = sharedPref.getString("foodYear", "");
+
+        EditText editText = findViewById(R.id.food_month);
+        editText.setText(month);
+        editText = findViewById(R.id.food_day);
+        editText.setText(day);
+        editText = findViewById(R.id.food_year);
+        editText.setText(year);
     }
 
     //called when user taps save button
@@ -37,7 +56,7 @@ public class Reminders extends AppCompatActivity {
 
         Map<String, Long> reminderDates = new HashMap<>();
         Long dateInMillis;
-        SharedPreferences sharedPrefs = this.getSharedPreferences("Reminders", Context.MODE_PRIVATE);
+        SharedPreferences sharedPrefs = this.getSharedPreferences("ReminderDate", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
 
         int i =0;
@@ -52,8 +71,14 @@ public class Reminders extends AppCompatActivity {
             t = (EditText) findViewById(ids[j]);
             String year = t.getText().toString();
 
+
             //validate date before storing reminder and setting alarm
             if(isValidDate(month, day, year)){
+                editor.putString("foodMonth", month);
+                Log.d("message", "added " + sharedPrefs.getString("foodMonth", ""));
+                editor.putString(keys[i] + "Day", day);
+                editor.putString(keys[i] + "Year", year);
+               // editor.apply();
                 dateInMillis = dateToMillis(month, day, year);
                 Log.d("message", "added key: " + keys[i]);
                 reminderDates.put(keys[i], dateInMillis);
@@ -62,7 +87,7 @@ public class Reminders extends AppCompatActivity {
             i++;
         }
 
-
+        editor.apply();
         //presenter will save reminders to shared preferences and initiate setting alarms
         Presenter presenter = new Presenter();
         presenter.storeReminderDates(reminderDates, this);
