@@ -23,9 +23,13 @@
     <string name="other_shot_name">Name of Shot</string>
     <string name="shots">Shots</string>
     <string name="medication">Medication</string>
+<<<<<<< HEAD
     <string name="medication_information">Enter any type of medication information here.</string>
     <string name="medical_history_date">Enter Date</string>
     <string name="medical_history_notes">Enter Notes</string>
     <string name="button_load_notes">View Notes</string>
     <string name="button_save_note">Save Note</string>
+=======
+    <string name="medication_information">Enter medication information here.</string>
+>>>>>>> e358433b2c21906c36e8d329c6ddc8a3b7c00c10
 </resources>
