@@ -2,10 +2,19 @@ package team16.doglog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class MedicalHistory extends AppCompatActivity {
 
@@ -35,6 +44,20 @@ public class MedicalHistory extends AppCompatActivity {
 
     //called when user presses view notes button
     public void loadHistory (View view){
-        Toast.makeText(this, "pressed button to view notes", Toast.LENGTH_SHORT).show();
+        SharedPreferences sharedPrefs = this.getSharedPreferences("medicalHistoryNotes", Context.MODE_PRIVATE);
+        Map<String, ?> notes = sharedPrefs.getAll();
+        List<String> noteList = new ArrayList<>();
+        //create a list of all of the notes saved in shared preferences
+        for (Map.Entry<String,?> e : notes.entrySet()){
+            noteList.add(e.getKey() + "\n" + (String) e.getValue());
+        }
+
+        ListView lv = findViewById(R.id.note_history);
+        //set array adapter
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this,
+                        android.R.layout.simple_list_item_1,
+                        noteList);
+        lv.setAdapter(adapter);
     }
 }
