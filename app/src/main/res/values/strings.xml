@@ -24,4 +24,10 @@
     <string name="shots">Shots</string>
     <string name="medication">Medication</string>
     <string name="medication_information">Enter medication information here.</string>
+    <string name="add_new_profile">Add New Profile</string>
+    <string name="dog_name">Dog Name</string>
+    <string name="select_profile">Select Profile</string>
+    <string name="reset">Reset</string>
+    <string name="dog_name">Dog Name</string>
+    <string name="submit">Submit</string>
 </resources>
