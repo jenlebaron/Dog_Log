@@ -29,4 +29,10 @@
     <string name="add_new_profile">Add Dog Name</string>
     <string name="submit">Submit</string>
     <string name="reset">Reset</string>
+    <string name="SpayNeuter">Spay/Neuter</string>
+    <string name="dog_breed">Dog Breed</string>
+    <string name="ApproxBirthDate">Approximate Birth Date</string>
+    <string name="DogLicenseNumber">Dog License Number</string>
+    <string name="ChipInformation">Chip Information</string>
+    <string name="VetContactInfo">Vet Contact Info</string>
 </resources>

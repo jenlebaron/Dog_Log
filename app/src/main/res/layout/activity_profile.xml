@@ -7,18 +7,90 @@
     tools:context=".MainActivity">
 
 
+    <EditText
+        android:id="@+id/textView3"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="520dp"
+        android:hint="@string/dog_breed"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/textView4"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="436dp"
+        android:hint="@string/SpayNeuter"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/textView5"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="360dp"
+        android:hint="@string/ApproxBirthDate"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/textView6"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="280dp"
+        android:hint="@string/DogLicenseNumber"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/textView7"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="200dp"
+        android:hint="@string/ChipInformation"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
+    <EditText
+        android:id="@+id/textView8"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="120dp"
+        android:hint="@string/VetContactInfo"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_profile"
         android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,74 +98,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="127dp"
-        android:layout_height="66dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="108dp"
-        android:text="@string/reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="220dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/dog_name"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="220dp"
-        android:layout_height="52dp"
-        android:text="@string/dog_name"
-        android:textSize="25sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="97dp" />
-
-
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="220dp"
-        android:layout_height="52dp"
-        android:text="@string/dog_name"
-        android:textSize="25sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="168dp" />
 
     <EditText
         android:id="@+id/textView"
         android:layout_width="274dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginBottom="596dp"
+        android:hint="@string/dog_name"
         android:inputType="text"
-        android:text="@string/add_new_profile"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="127dp"
         android:layout_height="66dp"
-        android:layout_marginBottom="108dp"
-        android:text="@string/submit"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/button_save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
