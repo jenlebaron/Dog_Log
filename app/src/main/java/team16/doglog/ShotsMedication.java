@@ -32,7 +32,7 @@ public class ShotsMedication extends AppCompatActivity {
             R.id.rabies_shot_month, R.id.rabies_shot_day, R.id.rabies_shot_year, R.id.parvo_shot_month,
             R.id.parvo_shot_day, R.id.parvo_shot_year, R.id.hepatitis_shot_month, R.id.hepatitis_shot_day,
             R.id.hepatitis_shot_year, R.id.other_shot_name, R.id.other_shot_month, R.id.other_shot_day,
-            R.id.other_shot_year, R.id.medication_info;
+            R.id.other_shot_year, R.id.medication_info
 };
  private String[]keys=new String[]{"distemperShotMonth","distemperShotDay","distemperShotYear",
          "rabiesShotMonth","rabiesShotDay","rabiesShotYear",
@@ -68,7 +68,7 @@ public void loadShotsMedication(){
 
 //called when user presses save button
 public void saveShotsMedication(View view){
-        String[]keys=new String[]{"distemperShot","rabiesShot","parvoShot","hepatitisShot" "otherShots"};
+        String[]keys=new String[]{"distemperShot","rabiesShot","parvoShot","hepatitisShot", "otherShots"};
 
         Map<String, Long> reminderDates=new HashMap<>();
         Long dateInMillis;

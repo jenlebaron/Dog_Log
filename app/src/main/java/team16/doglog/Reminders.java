@@ -22,7 +22,7 @@ public class Reminders extends AppCompatActivity {
             R.id.distemper_month,R.id.distemper_day,R.id.distemper_year,
             R.id.rabies_month,R.id.rabies_day,R.id.rabies_year,
             R.id.parvo_month,R.id.parvo_day,R.id.parvo_year,
-            R.id.hepatitis_month,R.id.hepatitis_day,R.id.hepatitis_year, };
+            R.id.hepatitis_month,R.id.hepatitis_day,R.id.hepatitis_year};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
