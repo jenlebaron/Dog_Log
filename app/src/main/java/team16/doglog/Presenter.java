@@ -31,4 +31,15 @@ Log.d("message", "cleared shared prefs");
         nm.setAlarm(context);
     }
 
+    //stores note for medical history in shared preferences
+    public void saveNote(Context context, String date, String note){
+        Log.d("message", "presenter saved note");
+        SharedPreferences sharedPrefs = context.getSharedPreferences("medicalHistoryNotes", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.putString(date, note);
+        editor.apply();
+
+        Log.d("message", sharedPrefs.getAll().toString());
+    }
+
 }
