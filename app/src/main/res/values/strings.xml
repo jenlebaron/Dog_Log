@@ -35,4 +35,8 @@
     <string name="DogLicenseNumber">Dog License Number</string>
     <string name="ChipInformation">Chip Information</string>
     <string name="VetContactInfo">Vet Contact Info</string>
+    <string name="button_load_notes">View Notes</string>
+    <string name="button_save_note">Save Note</string>
+    <string name="medical_history_date">Enter Date</string>
+    <string name="medical_history_notes">Enter Notes</string>
 </resources>
