@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -59,5 +60,26 @@ public class MedicalHistory extends AppCompatActivity {
                         android.R.layout.simple_list_item_1,
                         noteList);
         lv.setAdapter(adapter);
+
+        /*lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+
+                //MyClass selItem = (MyClass) myList.getSelectedItem(); //
+                String value = (String) lv.getItemAtPosition(position);
+                //value =
+
+            }
+        }*/
     }
+
+    public void deleteNotes(View view){
+        SharedPreferences sharedPrefs = this.getSharedPreferences("medicalHistoryNotes", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.clear();
+        editor.commit();
+        loadHistory(view);
+    }
+
+
 }

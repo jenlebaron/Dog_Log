@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/medical_history_date"
-        android:inputType="textPersonName"
+        android:inputType="date|datetime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -73,6 +73,7 @@
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
+        android:id="@+id/button_delete_notes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -101,5 +102,17 @@
 
         </ListView>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_notes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Delete Notes"
+        android:onClick="deleteNotes"
+        app:layout_constraintStart_toEndOf="@+id/view_notes_button"
+        app:layout_constraintTop_toBottomOf="@+id/medical_history_save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
