@@ -2,8 +2,9 @@
     <string name="app_name">Dog Log</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_medical_history">Medical History</string>
-    <string name="menu_shots_medication">Shots and Medication</string>
+    <string name="menu_misc_info">Misc Information</string>
     <string name="menu_reminders">Reminders</string>
+    <string name="menu_shots_medication">Shots and Medication</string>
     <string name="reminder_food">Order Food</string>
     <string name="reminder_office_visit">Schedule Office Visit</string>
     <string name="reminder_distemper_shot">Schedule Distemper Shot</string>
@@ -39,4 +40,11 @@
     <string name="button_save_note">Save Note</string>
     <string name="medical_history_date">Enter Date</string>
     <string name="medical_history_notes">Enter Notes</string>
+    <string name="misc_info">Misc Information</string>
+    <string name="misc_food">Food</string>
+    <string name="misc_food_list">Amount and time</string>
+    <string name="misc_routine">Daily Routine</string>
+    <string name="misc_routine_list">Add routine here</string>
+    <string name="misc_other_info">Other Information</string>
+    <string name="misc_other_info_list">List other info here</string>
 </resources>
