@@ -71,6 +71,7 @@ public class ShotsMedication extends AppCompatActivity {
         Toast.makeText(this, "Shots & medication saved", Toast.LENGTH_SHORT).show();
         Log.d(getClass().getName(), "Received Toast");
         editor.apply();
+
     }
 }
 
