@@ -64,12 +64,14 @@ public class Reminders extends AppCompatActivity {
         Long dateInMillis;
         SharedPreferences sharedPrefs = this.getSharedPreferences("ReminderDate", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
+        //clear previously saved dates
+        editor.clear();
+        editor.commit();
 
         int i =0;
         for(int j = 0; j < ids.length; j++){
             EditText t = (EditText) findViewById(ids[j]);
             String month = t.getText().toString();
-            editor.putString(keys[i] + "Month", month);
             j++;
             t = (EditText) findViewById(ids[j]);
             String day = t.getText().toString();
