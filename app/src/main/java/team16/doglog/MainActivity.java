@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     //called when user selects Misc Info from main menu
-    public void selectMiscInfo(View view){
-        Intent intent = new Intent (this, MiscInfo.class);
+    public void selectMiscInformation(View view){
+        Intent intent = new Intent (this, MiscInformation.class);
         startActivity(intent);
     }
 }

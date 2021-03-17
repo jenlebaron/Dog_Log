@@ -55,7 +55,7 @@
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
-        android:onClick="selectMiscInfo"
+        android:onClick="selectMiscInformation"
         android:text="@string/menu_misc_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
