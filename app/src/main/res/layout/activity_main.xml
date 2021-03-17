@@ -10,11 +10,10 @@
         android:id="@+id/button_profile"
         android:layout_width="210dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="selectProfile"
         android:text="@string/menu_profile"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,36 +21,44 @@
         android:id="@+id/button_medical_history"
         android:layout_width="210dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="selectMedicalHistory"
         android:text="@string/menu_medical_history"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/button_shots_medication" />
 
     <Button
         android:id="@+id/button_shots_medication"
         android:layout_width="210dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="selectShotsMedication"
         android:text="@string/menu_shots_medication"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_medical_history" />
+        app:layout_constraintTop_toBottomOf="@+id/button_profile" />
 
     <Button
         android:id="@+id/button_reminders"
         android:layout_width="210dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="selectReminders"
         android:text="@string/menu_reminders"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_shots_medication" />
+        app:layout_constraintTop_toBottomOf="@+id/button_medical_history" />
+
+    <Button
+        android:id="@+id/button_misc_info"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:onClick="selectMiscInfo"
+        android:text="@string/menu_misc_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_reminders" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

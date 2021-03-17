@@ -43,22 +43,22 @@ public class Presenter {
     }
 
 
-    //stores note for shots and medication in shared preferences
-    public void saveShotsMedication(Map<String, Long> dates, Context context){
-        SharedPreferences sharedPrefs = context.getSharedPreferences("ShotsMedication.txt", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPrefs.edit();
-        editor.clear();
-        editor.commit();
-        Log.d("message", "cleared shared prefs");
-        String key;
-
-        for (Map.Entry<String,Long> e : dates.entrySet()){
-            Log.d("message", "added to shared prefs: " + e.getKey());
-            key = e.getKey();
-            editor.putLong(key, e.getValue());
-        }
-
-        editor.apply();
-    }
+//    //stores note for shots and medication in shared preferences
+//    public void saveShotsMedication(Map<String, Long> dates, Context context){
+//        SharedPreferences sharedPrefs = context.getSharedPreferences("ShotsMedication", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPrefs.edit();
+//        editor.clear();
+//        editor.commit();
+//        Log.d("message", "cleared shared prefs");
+//        String key;
+//
+//        for (Map.Entry<String,Long> e : dates.entrySet()){
+//            Log.d("message", "added to shared prefs: " + e.getKey());
+//            key = e.getKey();
+//            editor.putLong(key, e.getValue());
+//        }
+//
+//        editor.apply();
+//    }
 
 }
