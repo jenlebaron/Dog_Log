@@ -4,123 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Profile">
 
-
-    <EditText
-        android:id="@+id/textView3"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="520dp"
-        android:hint="@string/dog_breed"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/textView4"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="436dp"
-        android:hint="@string/SpayNeuter"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/textView5"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="360dp"
-        android:hint="@string/ApproxBirthDate"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/textView6"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="280dp"
-        android:hint="@string/DogLicenseNumber"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/textView7"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="200dp"
-        android:hint="@string/ChipInformation"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/textView8"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="120dp"
-        android:hint="@string/VetContactInfo"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_profile"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        android:orientation="vertical"
+        android:gravity="center">
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_profile"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
 
-    <EditText
-        android:id="@+id/textView"
-        android:layout_width="274dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="596dp"
-        android:hint="@string/dog_name"
-        android:inputType="text"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/dog_name"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="127dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/button_save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/textView3"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/dog_breed"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/textView4"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/SpayNeuter"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/textView5"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ApproxBirthDate"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/textView6"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/DogLicenseNumber"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/textView7"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ChipInformation"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/textView8"
+            android:layout_width="274dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/VetContactInfo"
+            android:inputType="text"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="127dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="16dp"
+            android:onClick="saveProfile"
+            android:text="@string/button_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+    </LinearLayout>
+</ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
