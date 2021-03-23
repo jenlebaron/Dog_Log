@@ -37,6 +37,7 @@ public class Profile extends AppCompatActivity {
         }
     }
 
+    //called when user presses the save button on the profile activity
     public void saveProfile(View view){
         SharedPreferences sharedPrefs = this.getSharedPreferences("profile", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
@@ -47,6 +48,7 @@ public class Profile extends AppCompatActivity {
             editor.putString(keys[i], t.getText().toString());
         }
 
+        //notify user with a toast
         editor.apply();
         Toast.makeText(this, "Profile Saved", Toast.LENGTH_SHORT).show();
         Log.d("profile", sharedPrefs.getAll().toString());

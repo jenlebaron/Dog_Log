@@ -63,7 +63,6 @@ public class Reminders extends AppCompatActivity {
         String[] keys = new String[]{"food", "officeVisit", "distemperShot", "rabiesShot",
                                         "parvoShot", "hepatitisShot"};
 
-       // Map<String, Long> reminderDates = new HashMap<>();
         Long millisFromNow;
         SharedPreferences sharedPrefs = this.getSharedPreferences("ReminderDate", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
@@ -102,10 +101,6 @@ public class Reminders extends AppCompatActivity {
         }
 
         editor.apply();
-        //presenter will save reminders to shared preferences and initiate setting alarms
-        /*Presenter presenter = new Presenter();
-        presenter.storeReminderDates(reminderDates, this);
-        presenter.setAlarms(this);*/
 
         Toast.makeText(this, "Reminders set", Toast.LENGTH_SHORT).show();
     }
@@ -167,16 +162,13 @@ public class Reminders extends AppCompatActivity {
 
         //cancel all alarms
         for(int rc = 0; rc < 6; rc++){
-            //Log.d("message", "canceling alarm" + rc);
             am.cancel(PendingIntent.getBroadcast(this, rc,
                     new Intent(this, Reminders.class),
                     0));
         }
 
-        //Intent i = new Intent(this, AlarmReceiver.class);
+            //food notification opens chewy.com to reorder food
             if(key.matches("food")){
-                // i.setData(Uri.parse("https://chewy.com"));
-                //i.putExtra("type", key);
                 Intent notifIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://chewy.com"));
                 notifIntent.putExtra("type", key);
                 PendingIntent pi = PendingIntent.getActivity(this, code, notifIntent, 0);

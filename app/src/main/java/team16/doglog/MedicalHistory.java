@@ -60,19 +60,9 @@ public class MedicalHistory extends AppCompatActivity {
                         android.R.layout.simple_list_item_1,
                         noteList);
         lv.setAdapter(adapter);
-
-        /*lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-
-                //MyClass selItem = (MyClass) myList.getSelectedItem(); //
-                String value = (String) lv.getItemAtPosition(position);
-                //value =
-
-            }
-        }*/
     }
 
+    //called when user presses button to delete notes
     public void deleteNotes(View view){
         SharedPreferences sharedPrefs = this.getSharedPreferences("medicalHistoryNotes", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
