@@ -28,7 +28,7 @@ public class Presenter {
 
     public void setAlarms(Context context) {
         AlarmReceiver nm = new AlarmReceiver();
-        nm.setAlarm(context);
+        //nm.setAlarm(context);
     }
 
     //stores note for medical history in shared preferences

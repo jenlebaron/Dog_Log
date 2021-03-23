@@ -25,6 +25,7 @@ public class AlarmReceiver extends BroadcastReceiver {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onReceive(Context context, Intent intent) {
+        Log.d("message", "in on receive");
         //create notification channel for reminders
         NotificationChannel channel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -34,9 +35,9 @@ public class AlarmReceiver extends BroadcastReceiver {
             notificationManager.createNotificationChannel(channel);
         }
 
-        if(intent.getStringExtra("type").matches("food")){
+        /*if(intent.getStringExtra("type").matches("food")){
             Log.d("message", "alarm receive matches food");
-        }
+        }*/
 
         //create notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "Reminders")
@@ -52,7 +53,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         Log.d("message", "notification for " + intent.getStringExtra("type"));
     }
 
-    public void setAlarm(Context context){
+   /* public void setAlarm(Context context){
         AlarmManager am = (AlarmManager)context.getSystemService(context.ALARM_SERVICE);
 
         //cancel all alarms
@@ -143,5 +144,5 @@ public class AlarmReceiver extends BroadcastReceiver {
         {
             Log.d("message", "Alarm 5 is already active");
         }
-    }
+    }*/
 }
