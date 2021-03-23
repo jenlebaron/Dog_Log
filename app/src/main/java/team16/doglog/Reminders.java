@@ -70,14 +70,18 @@ public class Reminders extends AppCompatActivity {
         editor.clear();
         editor.commit();
 
+        //loop through all of the edit text fields
         int i =0;
         for(int j = 0; j < ids.length; j++){
+            //get month
             EditText t = (EditText) findViewById(ids[j]);
             String month = t.getText().toString();
             j++;
+            //get day
             t = (EditText) findViewById(ids[j]);
             String day = t.getText().toString();
             j++;
+            //get year
             t = (EditText) findViewById(ids[j]);
             String year = t.getText().toString();
 
@@ -87,10 +91,11 @@ public class Reminders extends AppCompatActivity {
                 editor.putString(keys[i] + "Month", month);
                 editor.putString(keys[i] + "Day", day);
                 editor.putString(keys[i] + "Year", year);
-               // editor.apply();
+
                 millisFromNow = dateToMillis(month, day, year);
+                //check if date entered is in the future
                 if(millisFromNow >= 0) {
-                    setAlarm((long) 5000, i, keys[i]);
+                    setAlarm((long) 5000, i, keys[i]); //change 5000 to milliesFromNow
                 }
                 else Toast.makeText(this, "Reminder for " + keys[i] + " has already passed.", Toast.LENGTH_SHORT).show();
                 Log.d("message", "added key: " + keys[i]);
@@ -107,10 +112,9 @@ public class Reminders extends AppCompatActivity {
 
     private Long dateToMillis(String m, String d, String y){
         Calendar c = Calendar.getInstance();
-        int month = Integer.parseInt(m) - 1;
+        int month = Integer.parseInt(m) - 1; //Calendar month is base 0, so have to subtract 1 from month user gives
         int day = Integer.parseInt(d);
         int year = Integer.parseInt(y);
-        //c.setTimeZone(m)
         c.set(year, month, day);
         Calendar now = Calendar.getInstance();
         Long millisFromNow = c.getTimeInMillis() - now.getTimeInMillis();
@@ -167,6 +171,7 @@ public class Reminders extends AppCompatActivity {
                     0));
         }
 
+        //now set new alarms
             //food notification opens chewy.com to reorder food
             if(key.matches("food")){
                 Intent notifIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://chewy.com"));
@@ -175,6 +180,8 @@ public class Reminders extends AppCompatActivity {
                 am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + time, pi);
                 Log.d("message", "in set alarm matches food");
             }
+
+            //all other reminders - not for food - regular notification with reminder message
             else {
                 Intent i = new Intent(this, AlarmReceiver.class);
                 i.putExtra("type", key);
@@ -183,58 +190,5 @@ public class Reminders extends AppCompatActivity {
             }
             Log.d("message", "set alarm for " + key);
 
-        boolean alarmUp = (PendingIntent.getBroadcast(this, 0,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 0 is already active");
-        }
-
-        alarmUp = (PendingIntent.getBroadcast(this, 1,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 1 is already active");
-        }
-
-        alarmUp = (PendingIntent.getBroadcast(this, 2,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 2 is already active");
-        }
-
-        alarmUp = (PendingIntent.getBroadcast(this, 3,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 3 is already active");
-        }
-
-        alarmUp = (PendingIntent.getBroadcast(this, 4,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 4 is already active");
-        }
-
-        alarmUp = (PendingIntent.getBroadcast(this, 5,
-                new Intent(this, AlarmReceiver.class),
-                0) != null);
-
-        if (alarmUp)
-        {
-            Log.d("message", "Alarm 5 is already active");
-        }
     }
 }
