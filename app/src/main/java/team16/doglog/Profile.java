@@ -28,7 +28,13 @@ public class Profile extends AppCompatActivity {
     //called when activity is created
     //fills in previously saved profile data
     public void loadProfile(){
+        SharedPreferences sharedPrefs = this.getSharedPreferences("profile", Context.MODE_PRIVATE);
 
+        for(int i = 0; i < ids.length; i++) {
+            EditText t = (EditText) findViewById(ids[i]);
+            Log.d("profile", "value is " + sharedPrefs.getString(keys[i], ""));
+            t.setText(sharedPrefs.getString(keys[i], ""));
+        }
     }
 
     public void saveProfile(View view){
