@@ -13,7 +13,8 @@
         android:theme="@style/Theme.DogLog">
         <activity
             android:name=".MiscInformation"
-            android:label="@string/title_activity_misc_information"></activity>
+            android:parentActivityName=".MainActivity" />
+
 
         <receiver
             android:name=".AlarmReceiver"
