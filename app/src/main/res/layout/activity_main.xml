@@ -6,82 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_profile"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="320dp"
-        android:onClick="selectProfile"
-        android:text="@string/menu_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/button_medical_history"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:onClick="selectMedicalHistory"
-        android:text="@string/menu_medical_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_shots_medication" />
+            <Button
+                android:id="@+id/button_profile"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:onClick="selectProfile"
+                android:text="@string/menu_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/b_takenew" />
 
-    <Button
-        android:id="@+id/button_shots_medication"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:onClick="selectShotsMedication"
-        android:text="@string/menu_shots_medication"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_profile" />
+            <Button
+                android:id="@+id/button_medical_history"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:onClick="selectMedicalHistory"
+                android:text="@string/menu_medical_history"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_shots_medication" />
 
-    <Button
-        android:id="@+id/button_reminders"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:onClick="selectReminders"
-        android:text="@string/menu_reminders"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_medical_history" />
+            <Button
+                android:id="@+id/button_shots_medication"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:onClick="selectShotsMedication"
+                android:text="@string/menu_shots_medication"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_profile" />
 
-    <Button
-        android:id="@+id/button_misc_info"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:onClick="selectMiscInformation"
-        android:text="@string/menu_misc_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_reminders" />
+            <Button
+                android:id="@+id/button_reminders"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:onClick="selectReminders"
+                android:text="@string/menu_reminders"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_medical_history" />
 
-    <ImageView
-        android:id="@+id/dog_photo"
-        android:layout_width="195dp"
-        android:layout_height="182dp"
-        android:layout_marginTop="45dp"
-        android:background="@mipmap/ic_launcher_round"
-        android:contentDescription="dog photo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-<!--        tools:srcCompat="@tools:sample/avatars" />-->
+            <Button
+                android:id="@+id/button_misc_info"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:onClick="selectMiscInformation"
+                android:text="@string/menu_misc_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_reminders" />
 
-    <Button
-        android:id="@+id/b_takenew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/take_photo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dog_photo" />
+            <!--        tools:srcCompat="@tools:sample/avatars" />-->
 
+            <ImageView
+                android:id="@+id/dog_photo"
+                android:layout_width="195dp"
+                android:layout_height="182dp"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/ic_launcher_round"
+                android:contentDescription="dog photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/b_takenew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/take_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dog_photo" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

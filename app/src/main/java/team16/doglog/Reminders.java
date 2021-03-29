@@ -95,7 +95,7 @@ public class Reminders extends AppCompatActivity {
                 millisFromNow = dateToMillis(month, day, year);
                 //check if date entered is in the future
                 if(millisFromNow >= 0) {
-                    setAlarm((long) 5000, i, keys[i]); //change 5000 to milliesFromNow
+                    setAlarm((long) millisFromNow, i, keys[i]); //change 5000 to milliesFromNow
                 }
                 else Toast.makeText(this, "Reminder for " + keys[i] + " has already passed.", Toast.LENGTH_SHORT).show();
                 Log.d("message", "added key: " + keys[i]);
