@@ -23,9 +23,9 @@
         android:id="@+id/reorder_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/reminder_food"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:onClick="saveReminders"
         android:text="@string/button_save"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/hint_day"
         android:inputType="number"
@@ -137,9 +137,9 @@
         android:id="@+id/hepatitis_year"
         android:layout_width="45dp"
         android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/hint_year"
         android:inputType="number"
@@ -169,10 +169,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
         android:text="@string/reminder_office_visit"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="157dp"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -268,7 +269,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:inputType="number"
@@ -298,7 +299,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/reminder_hepatitis_shot"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -337,9 +338,11 @@
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="112dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="91dp" />
 
     <EditText
         android:id="@+id/food_month"
@@ -350,9 +353,11 @@
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="112dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp" />
 
     <EditText
         android:id="@+id/food_year"
@@ -363,8 +368,10 @@
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="112dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="147dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
