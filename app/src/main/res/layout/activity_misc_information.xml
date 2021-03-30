@@ -24,96 +24,98 @@
         android:id="@+id/MiscFood"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
         android:hint="@string/misc_food_list"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.734"
         app:layout_constraintStart_toEndOf="@+id/FoodInfo"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
-
-    <TextView
-        android:id="@+id/FoodInfo"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="160dp"
-        android:text="@string/misc_food"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Routine"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/misc_routine"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FoodInfo" />
 
     <EditText
         android:id="@+id/MiscRoutine"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="@string/misc_routine_list"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toEndOf="@+id/Routine"
-        app:layout_constraintTop_toBottomOf="@+id/MiscFood"
-        android:importantForAutofill="no" />
-
-    <TextView
-        android:id="@+id/MiscInformation"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/misc_other_info"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Routine" />
+        app:layout_constraintTop_toBottomOf="@+id/MiscFood" />
 
     <EditText
         android:id="@+id/MiscInfoList"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/misc_other_info_list"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toEndOf="@+id/MiscInformation"
-        app:layout_constraintTop_toBottomOf="@+id/MiscRoutine"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/MiscRoutine" />
+
+    <TextView
+        android:id="@+id/MiscInformation"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/misc_other_info"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Routine" />
+
+    <TextView
+        android:id="@+id/Routine"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/misc_routine"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FoodInfo" />
+
+    <TextView
+        android:id="@+id/FoodInfo"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/misc_food"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_save_misc_info"
-        android:layout_width="125dp"
-        android:layout_height="35dp"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
         android:layout_marginStart="154dp"
         android:layout_marginLeft="154dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="165dp"
         android:layout_marginRight="165dp"
         android:onClick="saveMiscInformation"
         android:text="@string/button_save"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MiscInfo" />
 
