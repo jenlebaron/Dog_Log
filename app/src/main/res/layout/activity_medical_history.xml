@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MedicalHistory">
+
 
     <TextView
         android:id="@+id/textView2"
@@ -19,58 +21,45 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+
     <EditText
-        android:id="@+id/medical_date"
-        android:layout_width="wrap_content"
+        android:id="@+id/date"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="@string/medical_history_date"
-        android:inputType="date|datetime"
+        android:hint="Select Date..."
+        android:padding="15dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+
+
+
     <EditText
         android:id="@+id/medical_history_notes"
-        android:layout_width="382dp"
+        android:layout_width="340dp"
         android:layout_height="104dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/medical_history_notes"
         android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medical_date" />
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
-    <Button
-        android:id="@+id/medical_history_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="saveNote"
-        android:text="@string/button_save_note"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medical_history_notes"
-        tools:ignore="OnClick" />
-
-    <Button
-        android:id="@+id/view_notes_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="loadHistory"
-        android:text="@string/button_load_notes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medical_history_save"
-        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/button_delete_notes"
@@ -85,34 +74,53 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_notes_button">
+        app:layout_constraintTop_toBottomOf="@+id/delete_notes_button"
+        app:layout_constraintVertical_bias="0.0">
 
         <ListView
             android:id="@+id/note_history"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_height="370dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:background="#EBEEFF"
             android:scrollingCache="true"
             android:smoothScrollbar="true">
-
         </ListView>
-    </LinearLayout>
 
+    </LinearLayout>
     <Button
-        android:id="@+id/delete_notes_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/medical_history_save"
+        android:layout_width="178dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Delete Notes"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="saveNote"
+        android:text="@string/button_save_note"
+        app:layout_constraintEnd_toStartOf="@+id/delete_notes_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medical_history_notes"
+        tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/delete_notes_button"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:onClick="deleteNotes"
-        app:layout_constraintStart_toEndOf="@+id/view_notes_button"
-        app:layout_constraintTop_toBottomOf="@+id/medical_history_save" />
-
+        android:text="Delete "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/medical_history_save"
+        app:layout_constraintTop_toBottomOf="@+id/medical_history_notes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
