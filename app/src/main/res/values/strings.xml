@@ -64,4 +64,6 @@
     <string name="enter_text">Enter something to share</string>
     <string name="shared_text">Shared Text</string>
     <string name="shared_image">Shared Image</string>
+    <string name="button_save_profile">Save Pofile</string>
+    <string name="misc_other">Misc Other</string>
 </resources>

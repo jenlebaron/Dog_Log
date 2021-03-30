@@ -74,7 +74,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="36dp"
-        android:text="@string/misc_other_info"
+        android:text="@string/misc_other"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Routine" />
@@ -99,7 +99,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="92dp"
         android:text="@string/misc_food"
-        android:textSize="20sp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
