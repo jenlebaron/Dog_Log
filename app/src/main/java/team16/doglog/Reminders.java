@@ -164,14 +164,7 @@ public class Reminders extends AppCompatActivity {
     public void setAlarm(Long time, int code, String key){
         AlarmManager am = (AlarmManager)this.getSystemService(this.ALARM_SERVICE);
 
-        //cancel all alarms
-        for(int rc = 0; rc < 6; rc++){
-            am.cancel(PendingIntent.getBroadcast(this, rc,
-                    new Intent(this, Reminders.class),
-                    0));
-        }
-
-        //now set new alarms
+        //set alarms
             //food notification opens chewy.com to reorder food
             if(key.matches("food")){
                 Intent notifIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://chewy.com"));
