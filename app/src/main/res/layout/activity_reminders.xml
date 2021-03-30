@@ -192,12 +192,27 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
 
     <EditText
+        android:id="@+id/parvo_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <EditText
         android:id="@+id/parvo_year"
         android:layout_width="45dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/hint_year"
         android:inputType="number"
@@ -207,18 +222,18 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
 
     <EditText
-        android:id="@+id/parvo_day"
+        android:id="@+id/parvo_month"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="@string/hint_day"
+        android:hint="@string/hint_month"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/parvo_month"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
 
     <TextView
@@ -247,21 +262,6 @@
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/office_visit_month"
         app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
-
-    <EditText
-        android:id="@+id/parvo_month"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/hint_month"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
 
     <EditText
         android:id="@+id/hepatitis_month"
@@ -333,45 +333,51 @@
         android:id="@+id/food_day"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
         android:hint="@string/hint_day"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintStart_toEndOf="@+id/food_month"
         app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
-        app:layout_constraintVertical_bias="0.756"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp" />
+        app:layout_constraintVertical_bias="0.764"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/food_month"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
-        app:layout_constraintVertical_bias="0.756"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintVertical_bias="0.764"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/food_year"
         android:layout_width="45dp"
         android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:ems="10"
         android:hint="@string/hint_year"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/schedule_office_visit"
+        app:layout_constraintStart_toEndOf="@+id/food_day"
         app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading"
-        app:layout_constraintVertical_bias="0.756"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="147dp" />
+        app:layout_constraintVertical_bias="0.764"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
