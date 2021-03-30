@@ -66,4 +66,7 @@
     <string name="shared_image">Shared Image</string>
     <string name="button_save_profile">Save Pofile</string>
     <string name="misc_other">Misc Other</string>
+    <string name="distemper_shot">Distemper Shot</string>
+    <string name="rabies_shot">Rabies</string>
+    <string name="hepatitis_shot">Hepatitis Shot</string>
 </resources>

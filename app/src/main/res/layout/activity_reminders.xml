@@ -7,18 +7,6 @@
     tools:context=".Reminders">
 
     <TextView
-        android:id="@+id/reorder_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_food"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading" />
-
-    <TextView
         android:id="@+id/Reminder_Heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,117 +20,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/schedule_office_visit"
+        android:id="@+id/reorder_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_office_visit"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/reminder_food"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_month" />
+        app:layout_constraintTop_toBottomOf="@+id/Reminder_Heading" />
 
-    <TextView
-        android:id="@+id/schedule_distemper_shot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_distemper_shot"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/office_visit_month" />
-
-    <TextView
-        android:id="@+id/schedule_rabies_shot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_rabies_shot"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distemper_month" />
-
-    <TextView
-        android:id="@+id/schedule_parvo_shot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_parvo_shot"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rabies_month" />
-
-    <TextView
-        android:id="@+id/schedule_hepatitis_shot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/reminder_hepatitis_shot"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parvo_month" />
-
-    <EditText
-        android:id="@+id/food_month"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+    <Button
+        android:id="@+id/button_save_reminders"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_month"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
+        android:onClick="saveReminders"
+        android:text="@string/button_save"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order_food" />
-
-    <EditText
-        android:id="@+id/office_visit_month"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_month"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
-
-    <EditText
-        android:id="@+id/distemper_month"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_month"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+        app:layout_constraintTop_toBottomOf="@+id/hepatitis_month" />
 
     <EditText
         android:id="@+id/rabies_month"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:inputType="number"
@@ -152,12 +59,201 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
 
     <EditText
-        android:id="@+id/parvo_month"
+        android:id="@+id/rabies_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
+
+    <EditText
+        android:id="@+id/rabies_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/rabies_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
+
+    <EditText
+        android:id="@+id/distemper_day"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/distemper_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/distemper_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/distemper_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/hepatitis_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+
+    <EditText
+        android:id="@+id/hepatitis_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hepatitis_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+
+    <EditText
+        android:id="@+id/office_visit_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/office_visit_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <TextView
+        android:id="@+id/schedule_office_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="@string/reminder_office_visit"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="157dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/distemper_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
+
+    <EditText
+        android:id="@+id/parvo_year"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_year"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_day"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <EditText
+        android:id="@+id/parvo_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/parvo_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
+
+    <TextView
+        android:id="@+id/schedule_parvo_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/reminder_parvo_shot"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rabies_month" />
+
+    <EditText
+        android:id="@+id/office_visit_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/office_visit_month"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <EditText
+        android:id="@+id/parvo_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:inputType="number"
@@ -170,9 +266,9 @@
         android:id="@+id/hepatitis_month"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:inputType="number"
@@ -182,195 +278,93 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
 
     <EditText
+        android:id="@+id/office_visit_month"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_month"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
+
+    <TextView
+        android:id="@+id/schedule_hepatitis_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/reminder_hepatitis_shot"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parvo_month" />
+
+    <TextView
+        android:id="@+id/schedule_rabies_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reminder_rabies_shot"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distemper_month" />
+
+    <TextView
+        android:id="@+id/schedule_distemper_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/reminder_distemper_shot"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/office_visit_month" />
+
+    <EditText
         android:id="@+id/food_day"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_day"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/food_month"
-        app:layout_constraintTop_toBottomOf="@+id/order_food" />
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="112dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/office_visit_day"
+        android:id="@+id/food_month"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/hint_day"
+        android:hint="@string/hint_month"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/office_visit_month"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
-
-    <EditText
-        android:id="@+id/distemper_day"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_day"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/distemper_month"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
-
-    <EditText
-        android:id="@+id/rabies_day"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_day"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/rabies_month"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
-
-    <EditText
-        android:id="@+id/parvo_day"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_day"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/parvo_month"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
-
-    <EditText
-        android:id="@+id/hepatitis_day"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_day"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/hepatitis_month"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="112dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/food_year"
         android:layout_width="45dp"
         android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/hint_year"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/food_day"
-        app:layout_constraintTop_toBottomOf="@+id/order_food" />
-
-    <EditText
-        android:id="@+id/office_visit_year"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_year"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/office_visit_day"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_office_visit" />
-
-    <EditText
-        android:id="@+id/distemper_year"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_year"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/distemper_day"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_distemper_shot" />
-
-    <EditText
-        android:id="@+id/rabies_year"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_year"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/rabies_day"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_rabies_shot" />
-
-    <EditText
-        android:id="@+id/parvo_year"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_year"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/parvo_day"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_parvo_shot" />
-
-    <EditText
-        android:id="@+id/hepatitis_year"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/hint_year"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/hepatitis_day"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_hepatitis_shot" />
-
-    <Button
-        android:id="@+id/button_save_reminders"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="16dp"
-        android:onClick="saveReminders"
-        android:text="@string/button_save"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hepatitis_month" />
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="112dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,12 +55,27 @@
         app:layout_constraintTop_toBottomOf="@+id/rabies_shot_day" />
 
     <EditText
+        android:id="@+id/other_shot_day"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/hint_day"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/other_shot_month"
+        app:layout_constraintTop_toBottomOf="@+id/hepatitis_shot_day" />
+
+    <EditText
         android:id="@+id/other_shot_month"
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/hint_month"
         android:importantForAutofill="no"
@@ -72,10 +87,10 @@
     <EditText
         android:id="@+id/other_shot_name"
         android:layout_width="150sp"
-        android:layout_height="35sp"
+        android:layout_height="40dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/other_shot_name"
         android:importantForAutofill="no"
@@ -85,27 +100,12 @@
         app:layout_constraintTop_toBottomOf="@+id/hepatitis_shot_date" />
 
     <EditText
-        android:id="@+id/other_shot_day"
-        android:layout_width="35sp"
-        android:layout_height="35sp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="@string/hint_day"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/other_shot_month"
-        app:layout_constraintTop_toBottomOf="@+id/hepatitis_shot_day" />
-
-    <EditText
         android:id="@+id/other_shot_year"
         android:layout_width="45sp"
         android:layout_height="35sp"
         android:layout_marginStart="4sp"
         android:layout_marginLeft="4sp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16sp"
         android:layout_marginRight="16sp"
         android:ems="10"
@@ -125,7 +125,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="16dp"
-        android:text="@string/rabies_shot_date"
+        android:text="@string/rabies_shot"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distemper_shot_date" />
@@ -137,7 +137,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="104dp"
-        android:text="@string/distemper_shot_date"
+        android:text="@string/distemper_shot"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -304,7 +304,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="36dp"
-        android:text="@string/hepatitis_shot_date"
+        android:text="@string/hepatitis_shot"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parvo_shot_date" />
@@ -325,34 +325,34 @@
         app:layout_constraintStart_toEndOf="@+id/distemper_shot_month"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/medLabel"
-        android:layout_width="130sp"
-        android:layout_height="35sp"
-        android:layout_marginTop="404dp"
-        android:text="@string/medication"
-        android:textIsSelectable="false"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/medication_info"
         android:layout_width="300sp"
         android:layout_height="45sp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/medication_information"
         android:importantForAutofill="no"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medLabel" />
+
+    <TextView
+        android:id="@+id/medLabel"
+        android:layout_width="130sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="428dp"
+        android:text="@string/medication"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_save_shots_medication"
