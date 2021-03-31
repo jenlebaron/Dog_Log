@@ -1,6 +1,7 @@
 package team16.doglog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +17,14 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ViewNote extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +58,6 @@ public class ViewNote extends AppCompatActivity {
         }
 
 
-        Button delete = (Button) findViewById(R.id.delete);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                File dir = getFilesDir();
-                File file = new File(dir, FILE_NAME);
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                file.delete();
-                startActivity(intent);
-            }
-        });
-
 
         Button share = (Button) findViewById(R.id.btnTextShare);
         share.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +65,7 @@ public class ViewNote extends AppCompatActivity {
             public void onClick(View v) {
                 String getText = message;
                 if (!getText.equals("") && getText.length() != 0)
+
                     shareText(getText);
                 else
                     Toast.makeText(ViewNote.this,
@@ -87,10 +82,8 @@ public class ViewNote extends AppCompatActivity {
 
 
     private void shareText(String text) {
-
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");// Plain format text
-
         // You can add subject also
         /*
          * sharingIntent.putExtra( android.content.Intent.EXTRA_SUBJECT,
@@ -100,7 +93,10 @@ public class ViewNote extends AppCompatActivity {
         startActivity(Intent.createChooser(sharingIntent, "Share Text Using"));
     }
 
-
+    public void deleteNote(String text){
+        SharedPreferences sharedPrefs = this.getSharedPreferences("medicalHistoryNotes", Context.MODE_PRIVATE);
+        sharedPrefs.edit().remove(text).apply();
+   }
 
 
 
